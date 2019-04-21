@@ -1,5 +1,5 @@
 {
-  "name": "noodle",
+  "name": "@mstrlaw/noodle",
   "description": "A Node.js project scaffolding CLI tool",
   "version": "0.0.0",
   "author": "Lawrence @mstrlaw",
