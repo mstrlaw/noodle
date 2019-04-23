@@ -1,7 +1,7 @@
 {
   "name": "@mstrlaw/noodle",
   "description": "A Node.js project scaffolding CLI tool",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Lawrence @mstrlaw",
   "bin": {
     "noodle": "./bin/run"
