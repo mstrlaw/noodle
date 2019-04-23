@@ -9,8 +9,8 @@ const buildPackageContent = require('./contents/packageContent.js')
 const editorConfig = require('./contents/editorconfig.js')
 const indexContent = require('./contents/index.js')
 const buildReadme = require('./contents/readme.js')
-
 const gitignoreContent = require('./contents/gitignore.js')
+const babelrcContent = require('./contents/babelrc.js')
 
 class NoodleCommand extends Command {
   async run() {
@@ -54,6 +54,11 @@ class NoodleCommand extends Command {
     // Create .gitignore
     fs.appendFile(`${ dir }/.gitignore`, gitignoreContent, function (err) {
       console.log('✔ Created .gitignore')
+    })
+
+    // Create .babelrc
+    fs.appendFile(`${ dir }/.babelrc`, babelrcContent, function (err) {
+      console.log('✔ Created .babelrc')
     })
 
     // Create README.md
