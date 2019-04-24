@@ -11,6 +11,7 @@ const indexContent = require('./contents/index.js')
 const buildReadme = require('./contents/readme.js')
 const gitignoreContent = require('./contents/gitignore.js')
 const babelrcContent = require('./contents/babelrc.js')
+const configContent = require('./contents/configContent.js')
 
 class NoodleCommand extends Command {
   async run() {
@@ -49,6 +50,11 @@ class NoodleCommand extends Command {
     // Create lib/index.js
     fs.appendFile(`${ dir }/lib/index.js`, indexContent, function (err) {
       console.log('✔ Created /lib/index.js')
+    })
+
+    // Create lib/config.js
+    fs.appendFile(`${ dir }/lib/config.js`, configContent, function (err) {
+      console.log('✔ Created /lib/config.js')
     })
 
     // Create .gitignore
